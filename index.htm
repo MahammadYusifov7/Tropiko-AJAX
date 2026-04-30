@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tropiko</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body * {
+            font-family: 'Montserrat';
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .autoplay-progress {
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            z-index: 10;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--swiper-theme-color);
+        }
+
+        .autoplay-progress svg {
+            --progress: 0;
+            position: absolute;
+            left: 0;
+            top: 0px;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            stroke-width: 4px;
+            stroke: var(--swiper-theme-color);
+            fill: none;
+            stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+            stroke-dasharray: 125.6;
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-[#f7f7f7]">
+        <!-- Mobile Menu -->
+        <div class="mobil-menu lg:hidden xl:hidden p-8 shadow-xl">
+            <div class="flex items-center justify-between">
+                <a href="#home" onclick="loadPage('home')" class="logo flex flex-row items-center justify-center gap-3">
+                    <img src="img/logo.png" class="w-12" alt="">
+                    <h3 class="text-xl font-bold uppercase">Tropiko</h3>
+                </a>
+                <div class="flex items-center justify-center">
+                    <i onclick="menucontrol()" class="fa-solid fa-bars text-3xl"></i>
+                </div>
+            </div>
+        </div>
+        <div id="menubar" class="lg:hidden xl:hidden w-full mt-4 overflow-hidden transition-all duration-700 max-h-0">
+            <ul class="flex flex-col items-center justify-center gap-4 py-4">
+                <li><a href="#home" onclick="loadPage('home')" class="text-[16px]">Home</a></li>
+                <li><a href="#fruits" onclick="loadPage('fruits')" class="text-[16px]">Fruits</a></li>
+                <li><a href="#services" onclick="loadPage('services')" class="text-[16px]">Services</a></li>
+                <li><a href="#contact" onclick="loadPage('contact')" class="text-[16px]">Contact us</a></li>
+                <li><a href=""><i class="fa-solid fa-magnifying-glass text-[20px]"></i></a></li>
+                <li><button class="bg-[#fc5d35] text-white w-32 h-8 text-[14px] uppercase">get a quote</button></li>
+            </ul>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:block xl:block">
+            <div class="flex justify-evenly items-center text-center p-5 shadow-xl">
+                <a href="#home" onclick="loadPage('home')" class="logo flex items-center justify-center gap-2">
+                    <img src="img/logo.png" class="w-10 cursor-pointer" alt="">
+                    <h3 class="text-xl font-bold uppercase cursor-pointer">Tropiko</h3>
+                </a>
+                <div class="desktop-list">
+                    <ul class="flex items-center justify-center gap-8">
+                        <li><a href="#home" onclick="loadPage('home')"
+                                class="text-[17px] hover:text-[#fc5d35] duration-300">Home</a></li>
+                        <li><a href="#fruits" onclick="loadPage('fruits')"
+                                class="text-[17px] hover:text-[#fc5d35] duration-300">Fruits</a></li>
+                        <li><a href="#services" onclick="loadPage('services')"
+                                class="text-[17px] hover:text-[#fc5d35] duration-300">Services</a></li>
+                        <li><a href="#contact" onclick="loadPage('contact')"
+                                class="text-[17px] hover:text-[#fc5d35] duration-300">Contact us</a></li>
+                        <li><a href=""><i class="fa-solid fa-magnifying-glass text-[20px]"></i></a></li>
+                        <li><button
+                                class="bg-[#fc5d35] text-white w-32 h-8 text-[14px] uppercase cursor-pointer border-2 hover:bg-white hover:text-[#fc5d35]">get
+                                a quote</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+<main id="content">
+
+</main>
+
+
+    <footer class="bg-[#efeded]">
+        <div class="footertop py-8">
+            <div class="flex flex-col md:flex-row flex-wrap justify-evenly items-center gap-3 p-2">
+                <div class="flex flex-col">
+                    <h5 class="text-[22px] font-bold">Fruits</h5>
+                    <ul class="text-[16px] font-medium">
+                        <li>randomised</li>
+                        <li>words which</li>
+                        <li>don't look even</li>
+                        <li>slightly</li>
+                        <li>believable.If you</li>
+                        <li>are going to use</li>
+                        <li>a passage of</li>
+                        <li>Lorem Ipsum</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col">
+                    <h5 class="text-[22px] font-bold">Services</h5>
+                    <ul class="text-[16px] font-medium">
+                        <li>randomised</li>
+                        <li>words which</li>
+                        <li>don't look even</li>
+                        <li>slightly</li>
+                        <li>believable.If you</li>
+                        <li>are going to use</li>
+                        <li>a passage of</li>
+                        <li>Lorem Ipsum</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col">
+                    <h5 class="text-[22px] font-bold">List</h5>
+                    <ul class="text-[16px] font-medium">
+                        <li>randomised</li>
+                        <li>words which</li>
+                        <li>don't look even</li>
+                        <li>slightly</li>
+                        <li>believable.If you</li>
+                        <li>are going to use</li>
+                        <li>a passage of</li>
+                        <li>Lorem Ipsum</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-start">
+                    <h5 class="text-[22px] font-bold mb-2">Follow Us</h5>
+                    <ul class="flex items-center justify-between gap-2 mb-3">
+                        <li
+                            class="w-8 h-8 rounded-full border flex items-center justify-center cursor-pointer hover:bg-blue-700 hover:text-white">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </li>
+                        <li
+                            class="w-8 h-8 rounded-full border flex items-center justify-center cursor-pointer hover:bg-blue-400 hover:text-white">
+                            <i class="fa-brands fa-twitter"></i>
+                        </li>
+                        <li
+                            class="w-8 h-8 rounded-full border flex items-center justify-center cursor-pointer hover:bg-blue-600 hover:text-white">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </li>
+                        <li
+                            class="w-8 h-8 rounded-full border flex items-center justify-center cursor-pointer hover:bg-yellow-500 hover:text-white">
+                            <i class="fa-brands fa-instagram"></i>
+                        </li>
+                    </ul>
+                    <h5 class="text-[22px] mb-2">Subscribe Now</h5>
+                    <input type="text" class="border outline-none">
+                    <button
+                        class="mt-5 bg-[#fc5d35] text-white w-32 h-12 text-[18px] cursor-pointer border-2 hover:bg-white hover:text-[#fc5d35]">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footerbottom bg-[#efeded]">
+            <p class="text-[16px] text-center p-4 font-medium">Copyright &copy 2019 All Rights Reserved By Free HTML
+                Templates</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/swiper.js"></script>
+
+    <script>
+        const content = document.getElementById('content')
+        const ajax = new XMLHttpRequest()
+        loadPage(window.location.hash.slice(1) || 'home')
+
+        function loadPage(page) {
+            let file = `pages/${page}.htm`
+            ajax.open('GET', file)
+            ajax.send()
+            ajax.onload = function () {
+                content.innerHTML = this.response
+            }
+        }
+    </script>
+</body>
+
+</html>
