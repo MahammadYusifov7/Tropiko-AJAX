@@ -38,7 +38,7 @@ async function loadTranslations() {
         const response = await fetch('lang.json')
         translations = await response.json();
 
-        const movcuddil = localStorage.getItem('lang') || 'az';
+        const movcuddil = localStorage.getItem('lang') || 'en';
         changeLang(movcuddil)
     } catch (err) {
         console.error('Translation yüklənmədi:', err)
