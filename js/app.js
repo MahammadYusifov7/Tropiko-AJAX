@@ -26,7 +26,7 @@ function loadPage(page) {
         content.innerHTML = this.response
 
         // 🔥 BURA ƏLAVƏ ET
-        const lang = localStorage.getItem('lang') || 'en'
+        const lang = localStorage.getItem('lang') || 'az'
         changeLang(lang)
     }
 }
@@ -38,7 +38,7 @@ async function loadTranslations() {
         const response = await fetch('lang.json')
         translations = await response.json();
 
-        const movcuddil = localStorage.getItem('lang') || 'en';
+        const movcuddil = localStorage.getItem('lang') || 'az';
         changeLang(movcuddil)
     } catch (err) {
         console.error('Translation yüklənmədi:', err)
