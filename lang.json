@@ -29,7 +29,11 @@
         "dadlimeyve":"Çox dadlı Meyvələr",
         "reyler":"Rəylər",
         "gonder":"Göndər",
-        "desc2":"lakin əksəriyyəti hansısa formada, iynə ilə vurulan yumor və ya bir az da inandırıcı görünməyən təsadüfi sözlər vasitəsilə dəyişikliyə məruz qalıb. Əgər Lorem Ipsumdan bir parça istifadə edəcəksinizsə,"
+        "desc2":"lakin əksəriyyəti hansısa formada, iynə ilə vurulan yumor və ya bir az da inandırıcı görünməyən təsadüfi sözlər vasitəsilə dəyişikliyə məruz qalıb. Əgər Lorem Ipsumdan bir parça istifadə edəcəksinizsə,",
+        "name": "Adınız",
+        "phone":"Telefon nömrəsi",
+        "mail":"E-poçt hesabı",
+        "message":"Mesaj"
     },
     "en": {
         "navHome": "Home",
@@ -61,6 +65,10 @@
         "dadlimeyve":"very tasty fruits",
         "reyler":"Testimonial",
         "gonder":"Send",
-        "desc2":"but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be"
+        "desc2":"but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be",
+        "name":"Name",
+        "phone":"Phone Number",
+        "mail":"Email",
+        "message":"Message"
     }
 }

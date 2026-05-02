@@ -47,12 +47,18 @@ async function loadTranslations() {
 
 function changeLang(lang) {
     const elements = document.querySelectorAll('[data-key]');
-
+    
     elements.forEach(item => {
         const key = item.getAttribute('data-key')
 
         if (translations[lang] && translations[lang][key]) {
-            item.textContent = translations[lang][key]
+            
+            // 🔥 ƏGƏR INPUT-dursa
+            if (item.placeholder !== undefined) {
+                item.placeholder = translations[lang][key]
+            } else {
+                item.textContent = translations[lang][key]
+            }
         }
     })
 
